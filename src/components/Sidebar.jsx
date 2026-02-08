@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faFileInvoice, faScaleBalanced, faChartBar, faCodeBranch, faCog } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faFileInvoice, faScaleBalanced, faMailBulk, faChartBar, faCodeBranch, faCog } from '@fortawesome/free-solid-svg-icons'
 
 export default function Sidebar() {
     return (
@@ -9,6 +9,7 @@ export default function Sidebar() {
                 <SidebarItem to='/dashboard' icon={faHome} label='Dashboard' />
                 <SidebarItem to='/invoices' icon={faFileInvoice} label='Invoices' />
                 <SidebarItem to='/rules' icon={faScaleBalanced} label='Rules' />
+                <SidebarItem to='/emails' icon={faMailBulk} label='Email Logs' />
                 <SidebarItem to='/analytics' icon={faChartBar} label='Analytics' />
                 <SidebarItem to='/integrate' icon={faCodeBranch} label='Integrate' />
                 <SidebarItem to='/settings' icon={faCog} label='Settings' />

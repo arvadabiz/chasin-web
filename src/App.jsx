@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard'
 import Invoices from './pages/Invoices'
 import Rules from './pages/Rules'
 import RulesEdit from './pages/RulesEdit'
+import EmailLogs from './pages/EmailLogs'
 import Analytics from './pages/Analytics'
 import Integrate from './pages/Integrate'
 import Settings from './pages/Settings'
@@ -24,6 +25,7 @@ export default function App() {
                 <Route path='/invoices' element={<Invoices />} />
                 <Route path='/rules' element={<Rules />} />
                 <Route path='/rules/:id' element={<RulesEdit />} />
+                <Route path='/emails' element={<EmailLogs />} />
                 <Route path='/analytics' element={<Analytics />} />
                 <Route path='/integrate' element={<Integrate />} />
                 <Route path='/settings' element={<Settings />} />
