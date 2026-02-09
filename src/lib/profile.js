@@ -1,8 +1,10 @@
+const API = import.meta.env.VITE_API_URL
+
 export async function fetchProfile() {
     const token = localStorage.getItem('token')
 
     const res = await fetch(
-        `http://localhost:3000/profile`,
+        `${API}/profile`,
         {
             headers: {
                 'Authorization': `Bearer ${token}`

@@ -1,8 +1,10 @@
+const API = import.meta.env.VITE_API_URL
+
 export async function fetchRules() {
     const token = localStorage.getItem('token')
 
     const res = await fetch(
-        `http://localhost:3000/rules`,
+        `${API}/rules`,
         {
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -23,7 +25,7 @@ export async function fetchRuleData(id) {
     const token = localStorage.getItem('token')
 
     const res = await fetch(
-        `http://localhost:3000/rules/data?id=${encodeURIComponent(id)}`,
+        `${API}/data?id=${encodeURIComponent(id)}`,
         {
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -59,7 +61,7 @@ export async function saveRule(id, name, subject, body, color, days_overdue) {
     const accountId = userData.accountId
 
     const res = await fetch(
-        `http://localhost:3000/rules/save?id=${encodeURIComponent(id)}`,
+        `${API}/rules/save?id=${encodeURIComponent(id)}`,
         {
             method: 'POST',
             headers: {

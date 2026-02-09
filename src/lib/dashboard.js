@@ -1,8 +1,10 @@
+const API = import.meta.env.VITE_API_URL
+
 export async function fetchMetrics() {
     const token = localStorage.getItem('token')
 
     const res = await fetch(
-        `http://localhost:3000/invoices`,
+        `${API}/invoices`,
         {
             headers: {
                 'Authorization': `Bearer ${token}`

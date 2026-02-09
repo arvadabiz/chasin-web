@@ -1,6 +1,8 @@
+const API = import.meta.env.VITE_API_URL
+
 export async function fetchLogin(user, pass) {
     const res = await fetch(
-        `http://localhost:3000/auth/login`,
+        `${API}/auth/login`,
         {
             method: 'POST',
             headers: {
@@ -23,7 +25,7 @@ export async function fetchLogin(user, pass) {
 
 export async function fetchRegister(name, user, pass) {
     const res = await fetch(
-        `http://localhost:3000/auth/signup`,
+        `${API}/auth/signup`,
         {
             method: 'POST',
             headers: {
